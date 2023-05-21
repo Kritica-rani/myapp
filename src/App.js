@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./components/Form";
 
-function App() {
+const App = () => {
+  const intialState = 10;
+  const [count, setCount] = useState(intialState);
+  const [isEdit, setIsEdit] = useState(false);
+
+  const handleIncrease = () => {
+    // setCount(count + 1);
+    // setCount(count - 1);
+    // setCount(count - 1);
+    // for (let i = 0; i < 10; i++) {
+    // setCount((xyz) => xyz + 1);
+    // count++
+    // }
+    setCount((prevState) => prevState + 1);
+  };
+  const handleDecrease = () => {
+    setCount((prevState) => prevState - 1);
+  };
+  const handleReset = () => {
+    setCount(intialState);
+  };
+  console.log("rerender");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <h1>Counter</h1>
+      {count}
+      <button onClick={handleIncrease}>Increase</button>
+      <button onClick={handleDecrease}>Decrease</button>
+      <button onClick={handleReset}>Reset</button> */}
+      <Form />
     </div>
   );
-}
+};
 
 export default App;
