@@ -32,7 +32,11 @@ const Form = () => {
   return (
     <div>
       <h1>SignUp form</h1>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        method="post"
+        action="https://jsonplaceholder.typicode.com/posts"
+      >
         <div className="form">
           <label htmlFor="name"> Name :</label>
           <input

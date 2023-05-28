@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./components/Form";
+import { LearningEffect } from "./useEffect/LearningEffect";
 
 const App = () => {
   const intialState = 10;
@@ -30,7 +31,8 @@ const App = () => {
       <button onClick={handleIncrease}>Increase</button>
       <button onClick={handleDecrease}>Decrease</button>
       <button onClick={handleReset}>Reset</button> */}
-      <Form />
+      {/* <Form /> */}
+      <LearningEffect />
     </div>
   );
 };
